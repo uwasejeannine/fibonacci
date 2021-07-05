@@ -13,17 +13,8 @@ class MainActivity : AppCompatActivity() {
 
         var rvListNumbers = findViewById<RecyclerView>(R.id.rvListNumbers)
         rvListNumbers.layoutManager = LinearLayoutManager(baseContext)
-//        var numberAdapter = number_list (fibonacci(100))
-        rvListNumbers.adapter = number_list
-
-
+        rvListNumbers.adapter = number_list(fibonacci(100))
     }
-
-//    private fun number_list(fibonacci: List<BigInteger>): RecyclerView.Adapter<RecyclerView.ViewHolder>? {
-//return number_list(fibonacci)
-//    }
-
-
 }
 fun fibonacci(numbers: Int):List<BigInteger>{
     var nums= MutableList<BigInteger>(numbers,{BigInteger.ZERO })
