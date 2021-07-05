@@ -19,9 +19,8 @@ class number_list(public var numberList:List<BigInteger>):RecyclerView.Adapter<n
         holder.tvnumber_list.text=numberList.get(position).toString()
 
     }
-
     override fun getItemCount(): Int {
-       return numberList.size
+        return numberList.size
     }
 
     class NumberRecyclerView(num:View):RecyclerView.ViewHolder(num){
